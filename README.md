@@ -1,5 +1,7 @@
 # PulsePilot AI
 
+[![iOS CI](https://github.com/lanray07/PulsePilot-AI/actions/workflows/ios-ci.yml/badge.svg)](https://github.com/lanray07/PulsePilot-AI/actions/workflows/ios-ci.yml)
+
 PulsePilot AI is an adaptive SwiftUI health coach MVP for iPhone. It uses Apple Health and Apple Watch-style signals to generate daily recovery, fitness, sleep, hydration, energy, burnout, and mission recommendations.
 
 ## MVP Features
@@ -42,3 +44,5 @@ Add StoreKit subscriptions in `PremiumUpgradeView.swift` and centralize entitlem
 ## Validation Notes
 
 This workspace is Windows-based. Swift 6.3.1 and the Visual Studio/MSVC dependencies are installed, but iOS SwiftUI and HealthKit builds require Xcode on macOS. Local validation performed here checks project membership and plist/asset/scheme parsing.
+
+See `docs/NEXT_STEPS.md` for the remaining Xcode, Apple Developer, OpenAI, StoreKit, and HealthKit production steps.
