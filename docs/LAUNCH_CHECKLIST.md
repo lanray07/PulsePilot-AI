@@ -20,6 +20,7 @@
 - [ ] [Validate PulsePilot AI in Xcode](https://github.com/lanray07/PulsePilot-AI/issues/1)
 - [ ] [Add OpenAI-backed AI Coach](https://github.com/lanray07/PulsePilot-AI/issues/2)
 - [ ] [Implement StoreKit subscriptions](https://github.com/lanray07/PulsePilot-AI/issues/3)
+- [ ] Fill App Store metadata using `docs/APP_STORE_METADATA.md`.
 
 ## Requires Apple Developer Account
 

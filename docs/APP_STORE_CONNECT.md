@@ -35,9 +35,10 @@ Creating the app record changes the Apple Developer account, so verify the value
 ## After App Record Creation
 
 1. Set app category to Health & Fitness.
-2. Add privacy policy URL before submission.
-3. Add support URL before submission.
-4. Complete App Privacy nutrition labels.
-5. Upload screenshots after the app runs in Xcode.
-6. Add build from Xcode/TestFlight after signing is configured.
-7. Configure subscriptions only after StoreKit products are finalized.
+2. Fill version metadata using `docs/APP_STORE_METADATA.md`.
+3. Add privacy policy URL before submission.
+4. Add support URL before submission.
+5. Complete App Privacy nutrition labels.
+6. Upload screenshots after the app runs in Xcode.
+7. Add build from Xcode/TestFlight after signing is configured.
+8. Configure subscriptions only after StoreKit products are finalized.
