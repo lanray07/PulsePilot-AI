@@ -34,6 +34,7 @@ Recommended approach:
 2. Send a compact health context payload: recovery score, burnout level, sleep debt, steps, hydration target, missions, and the user's message.
 3. Stream or append the response into `ChatMessage`.
 4. Keep API keys out of the app binary. Use a backend proxy for production.
+5. Review `docs/PRIVACY_AND_SAFETY.md` before sending any health context to external services.
 
 ## StoreKit Subscriptions
 

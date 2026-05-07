@@ -41,6 +41,10 @@ Add OpenAI API integration in `MockAICoachService.swift`, replacing the local ru
 
 Add StoreKit subscriptions in `PremiumUpgradeView.swift` and centralize entitlement state in `AppState.swift` or a dedicated subscription service.
 
+## Privacy and Safety
+
+The MVP keeps health coaching local and uses a mock AI service. See `docs/PRIVACY_AND_SAFETY.md` before adding networked AI, analytics, or subscriptions.
+
 ## Validation Notes
 
 This workspace is Windows-based. Swift 6.3.1 and the Visual Studio/MSVC dependencies are installed, but iOS SwiftUI and HealthKit builds require Xcode on macOS. Local validation performed here checks project membership and plist/asset/scheme parsing.
