@@ -49,4 +49,4 @@ The MVP keeps health coaching local and uses a mock AI service. See `docs/PRIVAC
 
 This workspace is Windows-based. Swift 6.3.1 and the Visual Studio/MSVC dependencies are installed, but iOS SwiftUI and HealthKit builds require Xcode on macOS. Local validation performed here checks project membership and plist/asset/scheme parsing.
 
-See `docs/NEXT_STEPS.md` for the remaining Xcode, Apple Developer, OpenAI, StoreKit, and HealthKit production steps.
+See `docs/NEXT_STEPS.md` and `docs/LAUNCH_CHECKLIST.md` for the remaining Xcode, Apple Developer, OpenAI, StoreKit, and HealthKit production steps.

@@ -2,6 +2,8 @@
 
 These are the remaining production steps after the local MVP scaffold.
 
+For a single checklist view, see `docs/LAUNCH_CHECKLIST.md`.
+
 ## Xcode Validation
 
 1. Open `PulsePilotAI.xcodeproj` on macOS with Xcode.
