@@ -52,11 +52,11 @@ struct CoachChatView: View {
                     Image(systemName: "crown.fill")
                         .foregroundStyle(AppTheme.amber)
 
-                    Text("Premium AI Coach")
+                    Text("AI Coach Preview")
                         .font(.headline)
                 }
 
-                Text("Use preview mode to test the mock coach while StoreKit subscriptions are still placeholder logic.")
+                Text("Explore adaptive coaching suggestions for tired days, poor sleep, and missed workouts.")
                     .font(.subheadline)
                     .foregroundStyle(AppTheme.secondaryText)
                     .fixedSize(horizontal: false, vertical: true)
@@ -64,7 +64,7 @@ struct CoachChatView: View {
                 Button {
                     appState.setPremiumPreview(true)
                 } label: {
-                    Text("Enable Premium Preview")
+                    Text("Enable Coach Preview")
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                 }
