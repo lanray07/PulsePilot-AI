@@ -24,6 +24,7 @@
 ## Requires Apple Developer Account
 
 - [ ] Register bundle identifier: `com.pulsepilot.ai`.
+- [ ] Create App Store Connect app record using `docs/APP_STORE_CONNECT.md`.
 - [ ] Enable HealthKit capability for the App ID.
 - [ ] Set signing team in Xcode.
 - [ ] Create provisioning profiles.
