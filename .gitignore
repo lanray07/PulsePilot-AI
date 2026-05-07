@@ -1,0 +1,22 @@
+# Xcode
+DerivedData/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcscmblueprint
+
+# Build outputs
+build/
+.build/
+*.app
+*.ipa
+*.dSYM
+
+# Swift Package Manager
+Package.resolved
+
+# macOS
+.DS_Store
+
+# Codex/local tooling
+.tools/

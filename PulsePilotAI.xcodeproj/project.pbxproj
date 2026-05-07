@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01B000000000000000000001 /* PulsePilotAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000001 /* PulsePilotAIApp.swift */; };
+		01B000000000000000000002 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000002 /* AppState.swift */; };
+		01B000000000000000000003 /* AppTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000003 /* AppTab.swift */; };
+		01B000000000000000000004 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000004 /* RootView.swift */; };
+		01B000000000000000000005 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000005 /* SplashView.swift */; };
+		01B000000000000000000006 /* HealthSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000006 /* HealthSnapshot.swift */; };
+		01B000000000000000000007 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000007 /* Mission.swift */; };
+		01B000000000000000000008 /* OnboardingProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000008 /* OnboardingProfile.swift */; };
+		01B000000000000000000009 /* WeeklyReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000009 /* WeeklyReport.swift */; };
+		01B00000000000000000000A /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A00000000000000000000A /* ChatMessage.swift */; };
+		01B00000000000000000000B /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A00000000000000000000B /* HealthKitManager.swift */; };
+		01B00000000000000000000C /* SampleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A00000000000000000000C /* SampleDataProvider.swift */; };
+		01B00000000000000000000D /* MockAICoachService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A00000000000000000000D /* MockAICoachService.swift */; };
+		01B00000000000000000000E /* BurnoutPredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A00000000000000000000E /* BurnoutPredictor.swift */; };
+		01B00000000000000000000F /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A00000000000000000000F /* PersistenceService.swift */; };
+		01B000000000000000000010 /* MissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000010 /* MissionService.swift */; };
+		01B000000000000000000011 /* WeeklyReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000011 /* WeeklyReportService.swift */; };
+		01B000000000000000000012 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000012 /* OnboardingViewModel.swift */; };
+		01B000000000000000000013 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000013 /* DashboardViewModel.swift */; };
+		01B000000000000000000014 /* MissionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000014 /* MissionsViewModel.swift */; };
+		01B000000000000000000015 /* CoachChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000015 /* CoachChatViewModel.swift */; };
+		01B000000000000000000016 /* WeeklyReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000016 /* WeeklyReportViewModel.swift */; };
+		01B000000000000000000017 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000017 /* OnboardingView.swift */; };
+		01B000000000000000000018 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000018 /* DashboardView.swift */; };
+		01B000000000000000000019 /* MissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000019 /* MissionsView.swift */; };
+		01B00000000000000000001A /* CoachChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A00000000000000000001A /* CoachChatView.swift */; };
+		01B00000000000000000001B /* RecoveryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A00000000000000000001B /* RecoveryDetailsView.swift */; };
+		01B00000000000000000001C /* WeeklyReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A00000000000000000001C /* WeeklyReportView.swift */; };
+		01B00000000000000000001D /* PremiumUpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A00000000000000000001D /* PremiumUpgradeView.swift */; };
+		01B00000000000000000001E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A00000000000000000001E /* SettingsView.swift */; };
+		01B00000000000000000001F /* ScoreRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A00000000000000000001F /* ScoreRingView.swift */; };
+		01B000000000000000000020 /* MetricCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000020 /* MetricCard.swift */; };
+		01B000000000000000000021 /* MissionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000021 /* MissionRow.swift */; };
+		01B000000000000000000022 /* GradientCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000022 /* GradientCard.swift */; };
+		01B000000000000000000023 /* InsightPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000023 /* InsightPill.swift */; };
+		01B000000000000000000024 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000024 /* AppTheme.swift */; };
+		01B000000000000000000025 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000025 /* Formatters.swift */; };
+		01B000000000000000000026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000026 /* Assets.xcassets */; };
+		01B000000000000000000027 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000027 /* HealthKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01A000000000000000000001 /* PulsePilotAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsePilotAIApp.swift; sourceTree = "<group>"; };
+		01A000000000000000000002 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		01A000000000000000000003 /* AppTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTab.swift; sourceTree = "<group>"; };
+		01A000000000000000000004 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		01A000000000000000000005 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		01A000000000000000000006 /* HealthSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthSnapshot.swift; sourceTree = "<group>"; };
+		01A000000000000000000007 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		01A000000000000000000008 /* OnboardingProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProfile.swift; sourceTree = "<group>"; };
+		01A000000000000000000009 /* WeeklyReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyReport.swift; sourceTree = "<group>"; };
+		01A00000000000000000000A /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		01A00000000000000000000B /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		01A00000000000000000000C /* SampleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataProvider.swift; sourceTree = "<group>"; };
+		01A00000000000000000000D /* MockAICoachService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAICoachService.swift; sourceTree = "<group>"; };
+		01A00000000000000000000E /* BurnoutPredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnoutPredictor.swift; sourceTree = "<group>"; };
+		01A00000000000000000000F /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		01A000000000000000000010 /* MissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionService.swift; sourceTree = "<group>"; };
+		01A000000000000000000011 /* WeeklyReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyReportService.swift; sourceTree = "<group>"; };
+		01A000000000000000000012 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		01A000000000000000000013 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		01A000000000000000000014 /* MissionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsViewModel.swift; sourceTree = "<group>"; };
+		01A000000000000000000015 /* CoachChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachChatViewModel.swift; sourceTree = "<group>"; };
+		01A000000000000000000016 /* WeeklyReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyReportViewModel.swift; sourceTree = "<group>"; };
+		01A000000000000000000017 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		01A000000000000000000018 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		01A000000000000000000019 /* MissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsView.swift; sourceTree = "<group>"; };
+		01A00000000000000000001A /* CoachChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachChatView.swift; sourceTree = "<group>"; };
+		01A00000000000000000001B /* RecoveryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryDetailsView.swift; sourceTree = "<group>"; };
+		01A00000000000000000001C /* WeeklyReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyReportView.swift; sourceTree = "<group>"; };
+		01A00000000000000000001D /* PremiumUpgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumUpgradeView.swift; sourceTree = "<group>"; };
+		01A00000000000000000001E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		01A00000000000000000001F /* ScoreRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreRingView.swift; sourceTree = "<group>"; };
+		01A000000000000000000020 /* MetricCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCard.swift; sourceTree = "<group>"; };
+		01A000000000000000000021 /* MissionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionRow.swift; sourceTree = "<group>"; };
+		01A000000000000000000022 /* GradientCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCard.swift; sourceTree = "<group>"; };
+		01A000000000000000000023 /* InsightPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightPill.swift; sourceTree = "<group>"; };
+		01A000000000000000000024 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		01A000000000000000000025 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		01A000000000000000000026 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01A000000000000000000027 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		01A000000000000000000028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01A000000000000000000029 /* PulsePilotAI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PulsePilotAI.entitlements; sourceTree = "<group>"; };
+		01A00000000000000000002A /* PulsePilotAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsePilotAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01C000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B000000000000000000027 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01D000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				01D000000000000000000002 /* PulsePilotAI */,
+				01D000000000000000000014 /* Frameworks */,
+				01D000000000000000000015 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01D000000000000000000002 /* PulsePilotAI */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000001 /* PulsePilotAIApp.swift */,
+				01D000000000000000000003 /* App */,
+				01D000000000000000000004 /* Models */,
+				01D000000000000000000005 /* Services */,
+				01D000000000000000000006 /* ViewModels */,
+				01D000000000000000000007 /* Views */,
+				01D000000000000000000008 /* Components */,
+				01D000000000000000000009 /* Theme */,
+				01D00000000000000000000A /* Utilities */,
+				01D00000000000000000000B /* Resources */,
+				01A000000000000000000028 /* Info.plist */,
+				01A000000000000000000029 /* PulsePilotAI.entitlements */,
+			);
+			path = PulsePilotAI;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000002 /* AppState.swift */,
+				01A000000000000000000003 /* AppTab.swift */,
+				01A000000000000000000004 /* RootView.swift */,
+				01A000000000000000000005 /* SplashView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000006 /* HealthSnapshot.swift */,
+				01A000000000000000000007 /* Mission.swift */,
+				01A000000000000000000008 /* OnboardingProfile.swift */,
+				01A000000000000000000009 /* WeeklyReport.swift */,
+				01A00000000000000000000A /* ChatMessage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000005 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				01A00000000000000000000B /* HealthKitManager.swift */,
+				01A00000000000000000000C /* SampleDataProvider.swift */,
+				01A00000000000000000000D /* MockAICoachService.swift */,
+				01A00000000000000000000E /* BurnoutPredictor.swift */,
+				01A00000000000000000000F /* PersistenceService.swift */,
+				01A000000000000000000010 /* MissionService.swift */,
+				01A000000000000000000011 /* WeeklyReportService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000006 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000012 /* OnboardingViewModel.swift */,
+				01A000000000000000000013 /* DashboardViewModel.swift */,
+				01A000000000000000000014 /* MissionsViewModel.swift */,
+				01A000000000000000000015 /* CoachChatViewModel.swift */,
+				01A000000000000000000016 /* WeeklyReportViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000007 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01D00000000000000000000C /* Onboarding */,
+				01D00000000000000000000D /* Dashboard */,
+				01D00000000000000000000E /* Missions */,
+				01D00000000000000000000F /* Coach */,
+				01D000000000000000000010 /* Recovery */,
+				01D000000000000000000011 /* Weekly */,
+				01D000000000000000000012 /* Premium */,
+				01D000000000000000000013 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000008 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				01A00000000000000000001F /* ScoreRingView.swift */,
+				01A000000000000000000020 /* MetricCard.swift */,
+				01A000000000000000000021 /* MissionRow.swift */,
+				01A000000000000000000022 /* GradientCard.swift */,
+				01A000000000000000000023 /* InsightPill.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000009 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000024 /* AppTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		01D00000000000000000000A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000025 /* Formatters.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		01D00000000000000000000B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000026 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		01D00000000000000000000C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000017 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		01D00000000000000000000D /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000018 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		01D00000000000000000000E /* Missions */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000019 /* MissionsView.swift */,
+			);
+			path = Missions;
+			sourceTree = "<group>";
+		};
+		01D00000000000000000000F /* Coach */ = {
+			isa = PBXGroup;
+			children = (
+				01A00000000000000000001A /* CoachChatView.swift */,
+			);
+			path = Coach;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000010 /* Recovery */ = {
+			isa = PBXGroup;
+			children = (
+				01A00000000000000000001B /* RecoveryDetailsView.swift */,
+			);
+			path = Recovery;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000011 /* Weekly */ = {
+			isa = PBXGroup;
+			children = (
+				01A00000000000000000001C /* WeeklyReportView.swift */,
+			);
+			path = Weekly;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000012 /* Premium */ = {
+			isa = PBXGroup;
+			children = (
+				01A00000000000000000001D /* PremiumUpgradeView.swift */,
+			);
+			path = Premium;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000013 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				01A00000000000000000001E /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000014 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000027 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01D000000000000000000015 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01A00000000000000000002A /* PulsePilotAI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01E000000000000000000001 /* PulsePilotAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01F000000000000000000003 /* Build configuration list for PBXNativeTarget "PulsePilotAI" */;
+			buildPhases = (
+				01C000000000000000000002 /* Sources */,
+				01C000000000000000000001 /* Frameworks */,
+				01C000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PulsePilotAI;
+			productName = PulsePilotAI;
+			productReference = 01A00000000000000000002A /* PulsePilotAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01E000000000000000000002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					01E000000000000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 01F000000000000000000002 /* Build configuration list for PBXProject "PulsePilotAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01D000000000000000000001;
+			productRefGroup = 01D000000000000000000015 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01E000000000000000000001 /* PulsePilotAI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01C000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B000000000000000000026 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01C000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B000000000000000000001 /* PulsePilotAIApp.swift in Sources */,
+				01B000000000000000000002 /* AppState.swift in Sources */,
+				01B000000000000000000003 /* AppTab.swift in Sources */,
+				01B000000000000000000004 /* RootView.swift in Sources */,
+				01B000000000000000000005 /* SplashView.swift in Sources */,
+				01B000000000000000000006 /* HealthSnapshot.swift in Sources */,
+				01B000000000000000000007 /* Mission.swift in Sources */,
+				01B000000000000000000008 /* OnboardingProfile.swift in Sources */,
+				01B000000000000000000009 /* WeeklyReport.swift in Sources */,
+				01B00000000000000000000A /* ChatMessage.swift in Sources */,
+				01B00000000000000000000B /* HealthKitManager.swift in Sources */,
+				01B00000000000000000000C /* SampleDataProvider.swift in Sources */,
+				01B00000000000000000000D /* MockAICoachService.swift in Sources */,
+				01B00000000000000000000E /* BurnoutPredictor.swift in Sources */,
+				01B00000000000000000000F /* PersistenceService.swift in Sources */,
+				01B000000000000000000010 /* MissionService.swift in Sources */,
+				01B000000000000000000011 /* WeeklyReportService.swift in Sources */,
+				01B000000000000000000012 /* OnboardingViewModel.swift in Sources */,
+				01B000000000000000000013 /* DashboardViewModel.swift in Sources */,
+				01B000000000000000000014 /* MissionsViewModel.swift in Sources */,
+				01B000000000000000000015 /* CoachChatViewModel.swift in Sources */,
+				01B000000000000000000016 /* WeeklyReportViewModel.swift in Sources */,
+				01B000000000000000000017 /* OnboardingView.swift in Sources */,
+				01B000000000000000000018 /* DashboardView.swift in Sources */,
+				01B000000000000000000019 /* MissionsView.swift in Sources */,
+				01B00000000000000000001A /* CoachChatView.swift in Sources */,
+				01B00000000000000000001B /* RecoveryDetailsView.swift in Sources */,
+				01B00000000000000000001C /* WeeklyReportView.swift in Sources */,
+				01B00000000000000000001D /* PremiumUpgradeView.swift in Sources */,
+				01B00000000000000000001E /* SettingsView.swift in Sources */,
+				01B00000000000000000001F /* ScoreRingView.swift in Sources */,
+				01B000000000000000000020 /* MetricCard.swift in Sources */,
+				01B000000000000000000021 /* MissionRow.swift in Sources */,
+				01B000000000000000000022 /* GradientCard.swift in Sources */,
+				01B000000000000000000023 /* InsightPill.swift in Sources */,
+				01B000000000000000000024 /* AppTheme.swift in Sources */,
+				01B000000000000000000025 /* Formatters.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		01F000000000000000000004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01F000000000000000000005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01F000000000000000000006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PulsePilotAI/PulsePilotAI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PulsePilotAI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pulsepilot.ai;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		01F000000000000000000007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PulsePilotAI/PulsePilotAI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PulsePilotAI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pulsepilot.ai;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01F000000000000000000002 /* Build configuration list for PBXProject "PulsePilotAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01F000000000000000000004 /* Debug */,
+				01F000000000000000000005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01F000000000000000000003 /* Build configuration list for PBXNativeTarget "PulsePilotAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01F000000000000000000006 /* Debug */,
+				01F000000000000000000007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01E000000000000000000002 /* Project object */;
+}
