@@ -14,7 +14,8 @@ Apple still requires iOS apps to be archived and signed with Apple's toolchain b
 4. In App Store Connect, create an API key:
    - Go to **Users and Access**.
    - Open **Integrations** / **App Store Connect API**.
-   - Create a key with access to manage builds.
+   - Create a **Team Key**, not an Individual API Key.
+   - Use the **Admin** role for the first upload workflow.
    - Download the `.p8` key file immediately; Apple only allows downloading it once.
 5. Find your Apple Developer **Team ID** in Apple Developer account membership details.
 
@@ -54,6 +55,8 @@ If it succeeds, Apple still needs to process the uploaded build before it appear
 If it fails, open the run and download the `PulsePilotAI-xcode-logs` artifact. The `archive.log` file contains the real Xcode signing or archive error.
 
 If `archive.log` shows a 401 from `appstoreconnect.apple.com`, recreate the App Store Connect API key and confirm the Key ID, Issuer ID, and `.p8` contents match the same key.
+
+For signing/provisioning, the API key must be a **Team Key**. Apple's individual API keys can't use Provisioning endpoints, and Xcode needs those endpoints when `-allowProvisioningUpdates` creates or updates signing profiles.
 
 ## After upload
 
