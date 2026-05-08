@@ -41,6 +41,8 @@ Add these at:
 
 If it succeeds, Apple still needs to process the uploaded build before it appears in App Store Connect. This can take a few minutes.
 
+If it fails, open the run and download the `PulsePilotAI-xcode-logs` artifact. The `archive.log` file contains the real Xcode signing or archive error.
+
 ## After upload
 
 1. Open **App Store Connect -> PulsePilot AI -> Distribution -> 1.0 Prepare for Submission**.

@@ -18,6 +18,7 @@ jobs:
     timeout-minutes: 45
 
     env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       PROJECT: PulsePilotAI.xcodeproj
       SCHEME: PulsePilotAI
       BUNDLE_ID: com.pulsepilot.ai
@@ -31,7 +32,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Show Xcode version
-        run: xcodebuild -version
+        run: |
+          xcodebuild -version
+          xcodebuild -showsdks
 
       - name: Validate required secrets
         run: |
@@ -82,12 +85,14 @@ jobs:
 
       - name: Archive app
         run: |
+          set -o pipefail
+
           BUILD_NUMBER="${{ inputs.build_number }}"
           if [ -z "$BUILD_NUMBER" ]; then
             BUILD_NUMBER="${GITHUB_RUN_NUMBER}"
           fi
 
-          xcodebuild archive \
+          xcodebuild \
             -project "$PROJECT" \
             -scheme "$SCHEME" \
             -configuration Release \
@@ -101,10 +106,12 @@ jobs:
             -authenticationKeyPath "$API_KEY_PATH" \
             -authenticationKeyID "$ASC_KEY_ID" \
             -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
-            archive
+            archive 2>&1 | tee "$RUNNER_TEMP/archive.log"
 
       - name: Export IPA
         run: |
+          set -o pipefail
+
           xcodebuild -exportArchive \
             -archivePath "$RUNNER_TEMP/PulsePilotAI.xcarchive" \
             -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
@@ -112,7 +119,7 @@ jobs:
             -allowProvisioningUpdates \
             -authenticationKeyPath "$API_KEY_PATH" \
             -authenticationKeyID "$ASC_KEY_ID" \
-            -authenticationKeyIssuerID "$ASC_ISSUER_ID"
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" 2>&1 | tee "$RUNNER_TEMP/export.log"
 
           IPA_PATH="$(find "$RUNNER_TEMP/export" -name '*.ipa' -print -quit)"
           if [ -z "$IPA_PATH" ]; then
@@ -135,4 +142,14 @@ jobs:
         with:
           name: PulsePilotAI-ipa
           path: ${{ runner.temp }}/export/*.ipa
+          if-no-files-found: ignore
+
+      - name: Upload Xcode logs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PulsePilotAI-xcode-logs
+          path: |
+            ${{ runner.temp }}/archive.log
+            ${{ runner.temp }}/export.log
           if-no-files-found: ignore
