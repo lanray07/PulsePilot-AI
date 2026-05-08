@@ -31,6 +31,16 @@ Add these at:
 | `APP_STORE_CONNECT_ISSUER_ID` | The issuer ID from App Store Connect API page |
 | `APP_STORE_CONNECT_API_KEY` | Full text contents of the downloaded `.p8` file |
 
+Paste IDs without extra spaces or blank lines. The workflow trims ID whitespace, but the values should still be copied cleanly from Apple.
+
+For `APP_STORE_CONNECT_API_KEY`, include the full private key block:
+
+```text
+-----BEGIN PRIVATE KEY-----
+...
+-----END PRIVATE KEY-----
+```
+
 ## Run the upload
 
 1. Go to **GitHub -> PulsePilot-AI -> Actions**.
@@ -42,6 +52,8 @@ Add these at:
 If it succeeds, Apple still needs to process the uploaded build before it appears in App Store Connect. This can take a few minutes.
 
 If it fails, open the run and download the `PulsePilotAI-xcode-logs` artifact. The `archive.log` file contains the real Xcode signing or archive error.
+
+If `archive.log` shows a 401 from `appstoreconnect.apple.com`, recreate the App Store Connect API key and confirm the Key ID, Issuer ID, and `.p8` contents match the same key.
 
 ## After upload
 

@@ -38,6 +38,16 @@ jobs:
 
       - name: Validate required secrets
         run: |
+          APPLE_TEAM_ID="$(printf "%s" "$APPLE_TEAM_ID" | tr -d '[:space:]')"
+          ASC_KEY_ID="$(printf "%s" "$ASC_KEY_ID" | tr -d '[:space:]')"
+          ASC_ISSUER_ID="$(printf "%s" "$ASC_ISSUER_ID" | tr -d '[:space:]')"
+
+          {
+            echo "APPLE_TEAM_ID=$APPLE_TEAM_ID"
+            echo "ASC_KEY_ID=$ASC_KEY_ID"
+            echo "ASC_ISSUER_ID=$ASC_ISSUER_ID"
+          } >> "$GITHUB_ENV"
+
           missing=0
           for name in APPLE_TEAM_ID ASC_KEY_ID ASC_ISSUER_ID ASC_API_KEY; do
             if [ -z "${!name}" ]; then
@@ -45,13 +55,35 @@ jobs:
               missing=1
             fi
           done
+
+          if [ "${#APPLE_TEAM_ID}" -ne 10 ]; then
+            echo "::error::APPLE_TEAM_ID should be 10 characters after trimming whitespace."
+            missing=1
+          fi
+
+          if [ "${#ASC_ISSUER_ID}" -ne 36 ]; then
+            echo "::error::APP_STORE_CONNECT_ISSUER_ID should be a 36-character UUID after trimming whitespace."
+            missing=1
+          fi
+
           exit "$missing"
 
       - name: Write App Store Connect API key
         run: |
           API_KEY_PATH="$RUNNER_TEMP/AuthKey_${ASC_KEY_ID}.p8"
-          printf "%s" "$ASC_API_KEY" > "$API_KEY_PATH"
+          ASC_API_KEY_NORMALIZED="${ASC_API_KEY//\\n/$'\n'}"
+          printf "%s\n" "$ASC_API_KEY_NORMALIZED" > "$API_KEY_PATH"
           chmod 600 "$API_KEY_PATH"
+
+          if ! grep -q "BEGIN PRIVATE KEY" "$API_KEY_PATH"; then
+            echo "::error::APP_STORE_CONNECT_API_KEY must contain the full .p8 private key text, including BEGIN PRIVATE KEY."
+            exit 1
+          fi
+
+          if ! grep -q "END PRIVATE KEY" "$API_KEY_PATH"; then
+            echo "::error::APP_STORE_CONNECT_API_KEY must contain the full .p8 private key text, including END PRIVATE KEY."
+            exit 1
+          fi
 
           mkdir -p "$HOME/.appstoreconnect/private_keys"
           cp "$API_KEY_PATH" "$HOME/.appstoreconnect/private_keys/AuthKey_${ASC_KEY_ID}.p8"
